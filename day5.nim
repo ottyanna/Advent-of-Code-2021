@@ -28,6 +28,8 @@ block readInput:
         dataPos[dataPos.len-1].first = (appo[0].strip().split(",")[0].parseInt,appo[0].strip().split(",")[1].parseInt)
         dataPos[dataPos.len-1].second = (appo[1].strip().split(",")[0].parseInt,appo[1].strip().split(",")[1].parseInt)
 
+    f.close()
+
 block part1:
 
     proc gridInizialisation (dataPos : seq[Positions], grid : var seq[Grid]) =
