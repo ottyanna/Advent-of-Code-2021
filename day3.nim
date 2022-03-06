@@ -51,7 +51,7 @@ echo prod
 
 #PART TWO
 
-#defining procedures..
+#defining procedures
 proc myDelete(linesToBeDeleted : var seq, notFrequentNum : int, i : int) : void =
     var k : int
     while k < linesToBeDeleted.len:    

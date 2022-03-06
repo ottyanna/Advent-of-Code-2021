@@ -6,14 +6,13 @@ let data = readFile("day4.txt").strip().splitLines()
 #echo data[2]
 #echo data[2].strip().split(" ")
 
-#mi faccio la board
+#board construction
 type
   Cell = tuple
     value: int
     selected: bool
   
   Board = object
-    #rows, rank: int
     grid: array[0..4, array[0..4, Cell]]  
 
 var numbers : seq[int] = @[]

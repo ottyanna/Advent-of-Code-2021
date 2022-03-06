@@ -4,7 +4,7 @@ type
     Couple = tuple 
         x,y : int
 
-    Positions = object #se la metto come tupla non esiste il costruttore
+    Positions = object
         first, second : Couple
     
     Grid = object
@@ -63,13 +63,12 @@ block part1:
     for pos in dataPos:
         select(pos.first.x,pos.second.x,pos.first.y,pos.second.y, grid)
 
-    #[
+
     for item in grid:
             if item.count >= 2:
                 counter.inc
 
     echo counter
-    ]#
 
 block part2:
 
@@ -81,18 +80,17 @@ block part2:
         dy = pos.second.y-pos.first.y
 
         if dx.abs == dy.abs:
-            #echo pos
             steps = dx.abs
             dx=dx div steps
             dy=dy div steps
             for i in 0..steps:
-                #echo pos.first.x + i*dx
-                #echo pos.first.y + i*dy
                 for j in 0..<grid.len:
                     if grid[j].coord == (pos.first.x + i*dx , pos.first.y + i*dy ):
                         inc(grid[j].count)
                     
-#[   let num: int = readline(stdin).parseInt
+#[  to check grid 
+    
+    let num: int = readline(stdin).parseInt
 
 
     for item in grid:
