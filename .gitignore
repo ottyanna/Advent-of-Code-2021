@@ -1,0 +1,15 @@
+# https://stackoverflow.com/questions/5711120/gitignore-binary-files-that-have-no-extension
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Ignore input files
+*.txt
+
+#ignore tries
+*try*.nim
